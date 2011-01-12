@@ -1,0 +1,42 @@
+CALL main-proc:
+main-proc:
+IN x
+IN y
+	
+dowhile0:
+LOAD x 
+SUB y 
+JNEQ cond0:
+CALL testit-proc:
+IN x
+IN y
+	
+J dowhile0:
+cond0:
+RET
+blah-proc:
+LOAD 1 
+MULT 1
+
+STORE x 
+RET
+testit-proc:
+LOAD x 
+SUB y 
+JGTEQ cond1:
+LOAD 3 
+MULT 3
+		
+STORE x 
+LOAD x 
+ADD x
+		
+STORE x 
+OUT y
+	
+J endif0:
+cond1:
+OUT x
+	
+endif0:
+RET

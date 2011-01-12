@@ -1,0 +1,26 @@
+CALL main-proc:
+main-proc:
+IN x
+IN y
+	
+LOAD x 
+SUB y 
+JGTEQ cond0:
+OUT y
+		
+CALL blah-proc:
+J endif0:
+cond0:
+OUT x
+	
+endif0:
+RET
+blah-proc:
+CALL yeah-proc:
+OUT x
+	
+RET
+yeah-proc:
+OUT y
+	
+RET

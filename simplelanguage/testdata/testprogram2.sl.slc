@@ -1,0 +1,15 @@
+CALL main-proc:
+main-proc:
+IN abc
+	
+LOAD abc 
+ADD 10
+	
+STORE x 
+LOAD x 
+MULT 3
+	
+STORE y 
+OUT y
+	
+RET
